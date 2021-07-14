@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finnish sauna</title>
+    <style>
+      h1,
+      h2 {
+        text-align: center;
+      }
+      h1 {
+        color: #003580;
+      }
+      h2 {
+        border: 1px solid #003580;
+        border-radius: 10px;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 60px;
+        background-color: silver;
+        background: linear-gradient(silver, white);
+        line-height: 2;
+      }
+      .find-more {
+        display: block;
+        margin-top: 0;
+        text-decoration: none;
+        color: #003580;
+        line-height: 2;
+      }
+      .find-more:hover {
+        text-decoration: #003580 underline;
+      }
+      .link {
+        text-align: right;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 20px 30px;
+        border-radius: 10px;
+        border: 1px solid #003580;
+        color: silver;
+        background-color: #003580;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+      button:hover {
+        color: #003580;
+        background: silver;
+      }
+      .footer {
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+        font-size: smaller;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love sauna</h1>
+      <h2>Especially 🇫🇮Finnish sauna</h2>
+      <img
+        src="https://www.relaxdays.cz/www/upload/categories/images/20191203105144389.webp"
+        alt="Finnish sauna"
+        width="600"
+      />
+      <br />
+      <hr />
+      <p>
+        The <strong>Finnish sauna</strong> is a substantial part of Finnish
+        culture. It was inscribed on the UNESCO Intangible Cultural Heritage
+        Lists at the December 17, 2020 meeting of the UNESCO Intergovernmental
+        Committee for the Safeguarding of the Intangible Cultural Heritage.
+      </p>
+      <span class="link">
+        <a
+          href="https://en.wikipedia.org/wiki/Finnish_sauna"
+          target="_blank"
+          class="find-more"
+        >
+          <em>For more information go to wikipedia</em>
+        </a>
+      </span>
+      <hr />
+      <br />
+      <button class="visit-button">visit sauna</button>
+      <br />
+      <br />
+      <br />
+      <p class="footer">This page was created by Michaela Šimková</p>
+    </div>
+    <script>
+      function visit() {
+        let name = prompt("What is your name?");
+        let time = prompt("What is the time?");
+        let emoji = prompt("What is your favorite emoji?");
+
+        if (time >= 12) {
+          alert(
+            "Thank you, " +
+              name +
+              "! The sauna is common for women and men in the afternoon! " +
+              emoji
+          );
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! In the morning women and men are separate in the sauna! " +
+              emoji
+          );
+        }
+      }
+      let visitButton = document.querySelector(".visit-button");
+      visitButton.addEventListener("click", visit);
+    </script>
+  </body>
+</html>
